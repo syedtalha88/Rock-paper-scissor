@@ -7,23 +7,25 @@ let rockA=document.getElementById('a-rock');
 let paperA=document.getElementById('a-paper');
 let scissorA=document.getElementById('a-scissor');
 let background=document.querySelector('#main');
-let rounds=document.getElementById('roundspan')
+let rounds=document.getElementById('roundspan');
 
 
 let win_ai=0;
 let win_player=0;
 let round=0;
 let choice=-1;
-let Aichoice=Math.floor(Math.random()*3)
-console.log(Aichoice)
+
+
 
 let rock=()=>{
     choice=0
-    game();
     rockP.classList.add('show');
     setInterval(() => {
         rockP.classList.remove('show')
     }, 2000);
+    
+    game();
+
 }
 let paper=()=>{
     choice=1
@@ -44,6 +46,8 @@ let scissor=()=>{
 
 function game(){
     
+    let Aichoice=Math.floor(Math.random()*3);
+    console.log(Aichoice)
 
 if(Aichoice==0)
 {
