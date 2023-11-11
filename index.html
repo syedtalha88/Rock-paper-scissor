@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="container">
+            <div class="player-ai-container">
+            <div class="container-ai">
+                <div class="ai-images">
+                    <img src="rock U.png" class="arock" id="a-rock" alt="">
+                    <img src="paper U.png" class="apaper" id="a-paper" alt="">
+                    <img src="scissor U.png" class="ascissor" id="a-scissor" alt="">
+                </div>
+                <h2 class="ai-name">AI</h3>
+            </div>
+            <p class="round">Round-<span id="roundspan"> 1</span></p>
+            <div class="container-player">
+                <h2 class="ai-name">You</h3>
+                    <div class="player-images">
+                        <img src="rock D.png" class="p-images" id="p-rock" onclick="rock()" alt="">
+                        <img src="paper D.png" class="p-images" id="p-paper" onclick="paper()" alt=""> 
+                        <img src="scissor D.png" class="p-images" id="p-scissor" onclick="scissor()" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="animations">
+                <img  src="rock R.png " class="R-image r" alt="">
+                <img src="paper R.png" class="P-image r" alt="">
+                <img src="scissor R.png" class="S-image r" alt="">
+            </div>
+            <div class="score">
+                <div class="container-score">
+                    <div class="ai-score-container">
+                        <h4>AI</h4>
+                        <h4 class="ai-score" id="ai-score">0</h4>
+                    </div>
+                    <div class="player-score-container">
+                        <h4>You</h4>
+                        <h4 class="player-score" id="player-score">0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
