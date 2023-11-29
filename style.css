@@ -131,18 +131,21 @@ body{
 .ashow{
     transform: translateY(30%);
 }
+.pointerevents{
+    pointer-events: none;
+}
 @media only screen and (max-width:1250px)
 {
     .container-score{
         flex-direction: column;
         padding: auto;
-        height: 140px;
+        height: 170px;
         
     }
     .score{
         right: 30px;
         width: 150px;
-        height: 140px;
+        height: 170px;
         /* height: 140px; */
     }
 }

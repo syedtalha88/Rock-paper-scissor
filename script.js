@@ -8,6 +8,7 @@ let paperA=document.getElementById('a-paper');
 let scissorA=document.getElementById('a-scissor');
 let background=document.querySelector('#main');
 let rounds=document.getElementById('roundspan');
+let playerimages=document.getElementById('player-images');
 
 
 let win_ai=0;
@@ -20,27 +21,33 @@ let choice=-1;
 let rock=()=>{
     choice=0
     rockP.classList.add('show');
-    setInterval(() => {
+    playerimages.classList.add('pointerevents');
+    setTimeout(() => {
         rockP.classList.remove('show')
+        playerimages.classList.remove('pointerevents');
     }, 2000);
     
     game();
-
+    
 }
 let paper=()=>{
     choice=1
     game();
     paperP.classList.add('show')
-    setInterval(() => {
+    playerimages.classList.add('pointerevents');
+    setTimeout(() => {
         paperP.classList.remove('show')
+        playerimages.classList.remove('pointerevents');
     }, 2000);
 }
 let scissor=()=>{
     choice=2
     game();
     scissorP.classList.add('show')
-    setInterval(() => {
+    playerimages.classList.add('pointerevents');
+    setTimeout(() => {
         scissorP.classList.remove('show')
+        playerimages.classList.remove('pointerevents');
     }, 2000);
 }
 
@@ -52,21 +59,21 @@ function game(){
 if(Aichoice==0)
 {
     rockA.classList.add('ashow')
-    setInterval(() => {
+    setTimeout(() => {
         rockA.classList.remove('ashow');
     }, 2000);
 }
 else if(Aichoice==1)
 {
     paperA.classList.add('ashow')
-    setInterval(() => {
+    setTimeout(() => {
         paperA.classList.remove('ashow');
     }, 2000);
 }
 else if(Aichoice==2)
 {
     scissorA.classList.add('ashow')
-    setInterval(() => {
+    setTimeout(() => {
         scissorA.classList.remove('ashow');
     }, 2000);
 }
@@ -110,7 +117,7 @@ else if((choice==2)&&(Aichoice==2))
 
 function tie(){
     background.classList.add('yellow');
-    setInterval(() => {
+    setTimeout(() => {
         background.classList.remove('yellow');
     }, 2000);
     round++;
@@ -120,7 +127,7 @@ function PlayerWin(){
     background.classList.add('green');
     win_player++;
     playerscore.innerHTML=win_player;
-    setInterval(() => {
+    setTimeout(() => {
         background.classList.remove('green');
     }, 2000);
     round++;
@@ -131,7 +138,7 @@ function AiWin(){
     background.classList.add('red');
     win_ai++;
     aiscore.innerHTML=win_ai;
-    setInterval(() => {
+    setTimeout(() => {
         background.classList.remove('red');
     }, 2000);
     round++;
@@ -149,5 +156,5 @@ else if(win_player==3)
     alert(" Congratulations You Won the Match ,Refresh the page to Play Again");
     
 }
-}, 500);
+}, 800);
 }
