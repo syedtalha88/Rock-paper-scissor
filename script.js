@@ -147,14 +147,25 @@ function AiWin(){
 
 setTimeout(() => {
     if(win_ai==3)
-{
-    alert(" AI has Won the Match ,Refresh the page to Play Again");
-    
-}
-else if(win_player==3)
-{
-    alert(" Congratulations You Won the Match ,Refresh the page to Play Again");
-    
-}
+    {
+        alert(" AI has Won the Match ,Better Luck Next Time :)");
+        round=0;
+        win_ai=0;
+        win_player=0;
+        aiscore.innerHTML=win_ai;
+        rounds.innerHTML=round;
+        playerscore.innerHTML=win_player;
+        
+    }
+    else if(win_player==3)
+    {
+        alert(" Congratulations You Won the Match ,Try Defeating the AI once more");
+        round=0;
+        win_ai=0;
+        win_player=0;
+        aiscore.innerHTML=win_ai;
+        rounds.innerHTML=round;
+        playerscore.innerHTML=win_player;
+    }
 }, 800);
 }
